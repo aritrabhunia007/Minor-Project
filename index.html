@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Campus Shuttle</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="logo">🚌 Campus Shuttle</div>
+  <p>Never miss your ride!</p>
+
+  <div class="tabs">
+    <button class="tab active" onclick="showTab('live')">Live Tracking</button>
+    <button class="tab" onclick="showTab('timetable')">Timetable</button>
+  </div>
+</header>
+
+<div class="container">
+
+  <!-- LEFT PANEL -->
+  <div class="sidebar">
+
+    <div class="card">
+      <h3>📍 Pick Your Route</h3>
+      <button class="route-btn active">Route A</button>
+      <button class="route-btn">Route B</button>
+      <button class="route-btn">Route C</button>
+    </div>
+
+    <div class="card">
+      <h3>🚌 Buses on the Move</h3>
+      <div class="bus">
+        <strong>Bus A1</strong>
+        <span class="status">On Time</span>
+        <p>Arriving in: <b>5 min</b></p>
+        <p>Seats: 32/45</p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- RIGHT PANEL -->
+  <div class="main">
+
+    <!-- LIVE -->
+    <div id="live" class="tab-content active">
+      <div class="map">
+        <p>🗺️ Map Loading...</p>
+      </div>
+    </div>
+
+    <!-- TIMETABLE -->
+    <div id="timetable" class="tab-content">
+      <div class="card timetable">
+        <h3>📅 Route A Schedule</h3>
+        <ul id="scheduleList"></ul>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
